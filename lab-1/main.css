@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-/* Google Fonts – simple and appropriate */
+/* Simple Google Fonts similar to the magazine */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=EB+Garamond&display=swap");
 
-/* Base page */
+/* Page */
 body {
   margin: 0;
-  background: #ffffff;
-  color: #000;
+  background: white;
+  color: black;
   font-family: "EB Garamond", Georgia, "Times New Roman", serif;
 }
 
 #page {
-  max-width: 900px;
+  max-width: 950px;
   margin: 30px auto;
   padding: 20px;
 }
@@ -23,9 +23,10 @@ header {
   margin-bottom: 20px;
 }
 
+/* EDITORIAL box */
 header h1 {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 4px 8px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 14px;
@@ -34,14 +35,16 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Big title */
 header h2 {
   font-family: "Oswald", Arial, sans-serif;
-  font-size: 60px;
-  letter-spacing: 6px;
+  font-size: 64px;
+  letter-spacing: 8px;
   text-transform: uppercase;
   margin: 10px 0;
 }
 
+/* Subheading line */
 header p {
   font-family: "Oswald", Arial, sans-serif;
   font-size: 13px;
@@ -56,17 +59,19 @@ main {
   column-gap: 30px;
 }
 
+/* Body text */
 main p {
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0 0 12px;
   text-align: justify;
 }
 
-/* Subheadings */
+/* Section headings */
 main h4 {
   font-size: 16px;
   margin: 12px 0 6px;
+  font-weight: bold;
 }
 
 /* Mobile */
@@ -77,5 +82,6 @@ main h4 {
 
   header h2 {
     font-size: 42px;
+    letter-spacing: 5px;
   }
 }
