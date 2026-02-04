@@ -2,7 +2,7 @@
 html {
 	box-sizing: border-box;
 }
-	*, *:before, *:after {
+	*, *::before, *::after {
 	box-sizing: inherit;
 }
 html {
@@ -24,6 +24,7 @@ header {
 	/* STEP 1d: Copy the resulting RGBa value and replace the background-color below */
 	background-color: black;
 	padding: 1% 10%;
+	/*opacity: 0.5;*/
 }
 header h1 {
 	text-transform: uppercase;
@@ -37,10 +38,10 @@ main {
 }
 main h2 {
 	/* STEP 2: Set the <h2> inside the <main> to the same transparent purple, but use the HSLa colour syntax, instead */
-
+	background-color: black;
 	font-size: 500%;
 	margin: 0;	
-	color: white;
+	/*color: white;*/
 }
 main p {
 	margin-top: 0;
