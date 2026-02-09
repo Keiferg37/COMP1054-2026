@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* CSS Reset / Normalization
+   Reference: https://piccalil.li/blog/a-modern-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Album-inspired palette */
+:root {
+  --bg: #0a0a0a;
+  --panel: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.65);
+  --accent: #e6e6e6;
+  --rule: rgba(255, 255, 255, 0.15);
+
+  --heading-font: "Oswald", sans-serif;
+  --body-font: "Source Serif 4", serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Layout */
+header,
+main,
+footer {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+header {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+main {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 850px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Panels */
+article,
+aside section {
+  background: var(--panel);
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+}
+
+/* Headings */
+h1,
+h2 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Spacing */
+section + section {
+  margin-top: 1.25rem;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+/* Lyrics block */
+pre {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  white-space: pre-wrap;
+}
+
+/* Blockquote */
+blockquote {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration-color: var(--muted);
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1rem 0 2.5rem;
+  color: var(--muted);
+}
