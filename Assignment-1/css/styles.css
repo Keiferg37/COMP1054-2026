@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -20,23 +24,44 @@ body {
 /* Album-inspired palette */
 :root {
   --bg: #0a0a0a;
-  --panel: rgba(255, 255, 255, 0.06);
+  --panel: rgba(0, 0, 0, 0.65);
   --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.65);
-  --accent: #e6e6e6;
-  --rule: rgba(255, 255, 255, 0.15);
+  --muted: rgba(255, 255, 255, 0.70);
+  --accent: rgba(255, 255, 255, 0.95);
+  --rule: rgba(255, 255, 255, 0.18);
 
   --heading-font: "Oswald", sans-serif;
   --body-font: "Source Serif 4", serif;
 }
 
+/* Background image */
 body {
   font-family: var(--body-font);
   color: var(--text);
   background-color: var(--bg);
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Layout */
+/* Dark overlay so text stays readable */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+/* Base text */
+p,
+li {
+  font-size: 1.02rem;
+}
+
+/* Layout containers */
 header,
 main,
 footer {
@@ -44,11 +69,25 @@ footer {
   margin: 0 auto;
 }
 
+/* Header */
 header {
   padding: 3rem 0 1.5rem;
   border-bottom: 1px solid var(--rule);
 }
 
+header > p:first-child {
+  color: var(--muted);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+header > h1 + p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* Main grid */
 main {
   padding: 2rem 0;
   display: grid;
@@ -71,6 +110,11 @@ aside section {
   border: 1px solid var(--rule);
 }
 
+/* Add spacing between aside sections */
+aside section + section {
+  margin-top: 1.25rem;
+}
+
 /* Headings */
 h1,
 h2 {
@@ -81,6 +125,8 @@ h2 {
 
 h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.10);
 }
 
 h2 {
@@ -97,22 +143,36 @@ p + p {
   margin-top: 0.75rem;
 }
 
+/* Quotes section spacing */
+blockquote + blockquote {
+  margin-top: 1.25rem;
+}
+
 /* Lyrics block */
 pre {
   margin-top: 0.75rem;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   border-radius: 12px;
   border: 1px solid var(--rule);
   white-space: pre-wrap;
+  font-family: inherit;
 }
 
 /* Blockquote */
 blockquote {
   margin-top: 1rem;
-  padding-left: 1rem;
+  padding: 1rem;
   border-left: 3px solid var(--accent);
   color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+}
+
+blockquote cite {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.60);
 }
 
 /* Lists */
@@ -124,14 +184,25 @@ li {
   margin: 0.4rem 0;
 }
 
+li::marker {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 /* Links */
 a {
   color: var(--accent);
-  text-decoration-color: var(--muted);
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 0.18em;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration-color: var(--accent);
+}
+
+a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 3px;
 }
 
 /* Footer */
@@ -139,4 +210,13 @@ footer {
   border-top: 1px solid var(--rule);
   padding: 1rem 0 2.5rem;
   color: var(--muted);
+}
+
+footer p + p {
+  margin-top: 0.5rem;
+}
+
+small {
+  display: block;
+  font-size: 0.95rem;
 }
