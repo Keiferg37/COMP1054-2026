@@ -152,6 +152,7 @@ blockquote + blockquote {
 
 /* Lyrics block */
 pre {
+  display: flex;
   margin-top: 0.75rem;
   padding: 1.25rem;
   background: rgba(0, 0, 0, 0.65);
