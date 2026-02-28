@@ -18,12 +18,15 @@ main {
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	gap: 1em;
+	padding: 1em;
 }
 main section {
-	width: 20%;
+	flex: 1 1 200px;   /* grow, shrink, min-width before wrapping */
+	max-width: 24%;    /* keeps 4-across on wide screens */
 	padding: 0.5em;
 	background-color: rgb(255,255,255);
-	box-shadow: 0px 7px 15px 5px rgba(0,0,0,0.1); 
+	box-shadow: 0px 7px 15px 5px rgba(0,0,0,0.1);
 }
 main section h2 {
 	margin: 0;
