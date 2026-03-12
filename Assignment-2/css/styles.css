@@ -39,6 +39,7 @@ img {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
+	position: relative;
 }
 
 /* ==========================================================================
@@ -276,8 +277,7 @@ main > section > ol > li p abbr[title] {
    ========================================================================== */
 main > aside:first-of-type figure {
 	margin: 0;
-	position: relative;
-	overflow: hidden;
+	position: static;
 }
 
 main > aside:first-of-type figure img {
@@ -287,13 +287,9 @@ main > aside:first-of-type figure img {
 
 /* Hide the dark gradient overlay – caption text not needed */
 main > aside:first-of-type figcaption {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	position: static;
 	padding: 0;
 	background: none;
-	color: #fff;
 }
 
 /* Hide "31 Cure the midwinter clothing blahs." */
@@ -306,7 +302,8 @@ main > aside:first-of-type figcaption p:first-child em {
 	display: none;
 }
 
-/* "Keith Lathrop" – rotated vertically along left edge, near bottom */
+/* "Keith Lathrop" – rotated vertically along left edge, bottom of page
+   Positioned relative to #container */
 main > aside:first-of-type figcaption p:last-child {
 	margin: 0;
 	font-family: "Oswald", Arial, sans-serif;
@@ -317,9 +314,10 @@ main > aside:first-of-type figcaption p:last-child {
 	color: rgba(0, 0, 0, 0.5);
 	writing-mode: vertical-lr;
 	transform: rotate(180deg);
+	white-space: nowrap;
 	position: absolute;
-	left: 0.3em;
-	bottom: 0.5em;
+	left: 1.2em;
+	bottom: 2em;
 }
 
 /* ==========================================================================
@@ -391,7 +389,7 @@ main > aside:last-of-type ol li::before {
    Right-aligned: "FEBRUARY 10.2009 ● WOMANSDAY.COM  1"
    ========================================================================== */
 footer {
-	border-top: 1px solid #ddd;
+	border-top: none;
 	padding: 0.4em 1.2em;
 	text-align: right;
 }
