@@ -17,8 +17,9 @@ html {
 	margin: 0 auto;
 }
 
-/* --- Tab list ---
-   https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
+/* list-style, display: flex
+   https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+   https://developer.mozilla.org/en-US/docs/Web/CSS/display */
 .tabs ul {
 	list-style: none;
 	margin: 0;
@@ -26,34 +27,48 @@ html {
 	display: flex;
 }
  
+/* margin-bottom: -1px pulls the tab down to overlap the panel border
+   https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom */
 .tabs ul li {
 	margin-bottom: -1px;
 }
  
+/* display: block, padding, border, text-decoration, color, background-color
+   https://developer.mozilla.org/en-US/docs/Web/CSS/display
+   https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+   https://developer.mozilla.org/en-US/docs/Web/CSS/border
+   https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+   https://developer.mozilla.org/en-US/docs/Web/CSS/color
+   https://developer.mozilla.org/en-US/docs/Web/CSS/background-color */
 .tabs ul li a {
 	display: block;
 	padding: 6px 14px;
 	text-decoration: none;
 	color: #000;
-	background: #f0f0f0;
+	background-color: #f0f0f0;
 	border: 1px solid #999;
-	border-bottom: 1px solid #999;
 }
  
-/* Active tab - bottom border matches panel background to "connect" tab to panel
-   https://css-tricks.com/functional-css-tabs-revisited/ */
+/* Attribute selector targets the active tab set by JavaScript
+   Setting border-bottom to match the panel background connects them visually
+   https://css-tricks.com/css-selectors/
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
 .tabs ul li[aria-selected="true"] a {
-	background: #fff;
+	background-color: #fff;
 	border-bottom: 1px solid #fff;
 }
  
-/* --- Tab panels --- */
+/* Panels hidden by default with display: none
+   https://developer.mozilla.org/en-US/docs/Web/CSS/display */
 div[role="tabpanel"] {
 	display: none;
 	border: 1px solid #999;
 	padding: 16px;
 }
  
+/* Active class added by JavaScript shows the panel
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors */
 div[role="tabpanel"].active {
 	display: block;
 }
+ 
