@@ -33,13 +33,7 @@ html {
 	margin-bottom: -2px;
 }
  
-/* display: block, padding, border, text-decoration, color, background-color
-   https://developer.mozilla.org/en-US/docs/Web/CSS/display
-   https://developer.mozilla.org/en-US/docs/Web/CSS/padding
-   https://developer.mozilla.org/en-US/docs/Web/CSS/border
-   https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
-   https://developer.mozilla.org/en-US/docs/Web/CSS/color
-   https://developer.mozilla.org/en-US/docs/Web/CSS/background-color */
+/* display: block, padding, border, text-decoration, color, background-color*/
 .tabs ul li a {
 	display: block;
 	padding: 6px 14px;
@@ -56,14 +50,15 @@ html {
    https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
 .tabs ul li[aria-selected="true"] a {
 	background-color: #fff;
-	border-bottom: 1px solid #fff;
+	border-bottom: 2px solid #fff;
 }
  
 /* Panels hidden by default with display: none
    https://developer.mozilla.org/en-US/docs/Web/CSS/display */
 div[role="tabpanel"] {
 	display: none;
-	border: 1px solid #999;
+	border: 2px solid #999;
+	border-radius: 0 0 6px 6px;
 	padding: 16px;
 }
  
