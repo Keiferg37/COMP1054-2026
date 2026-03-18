@@ -30,7 +30,7 @@ html {
 /* margin-bottom: -1px pulls the tab down to overlap the panel border
    https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom */
 .tabs ul li {
-	margin-bottom: -1px;
+	margin-bottom: -2px;
 }
  
 /* display: block, padding, border, text-decoration, color, background-color
