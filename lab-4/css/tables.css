@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+html {
+    font: 110%/1.3 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+/* Collapse borders */
+table {
+    border-collapse: collapse;
+    caption-side: top;
+    width: 100%;
+    table-layout: auto;
+}
+/* Zebra striping for columns */
+colgroup + colgroup col:nth-child(odd) {
+    background-color: rgba(0, 40, 85, 0.07);
+}
+colgroup + colgroup col:nth-child(even) {
+    background-color: rgba(0, 40, 85, 0.03);
+}
+
+/* Padding for usability with TH and TD */
+td, th {
+    border: 1px solid #999;
+    padding: 0.4em 0.6em;
+}
+th {
+    background: rgba(210, 215, 220, 1);
+}
+/* Align table headings in the table body */
+tbody th {
+    text-align: right;
+}
+
+/* Row zebra striping */
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+/* Hover highlight */
+tbody tr:hover {
+    background-color: rgba(0, 60, 120, 0.12);
+}
+
+tfoot td {
+    font-size: 60%;
+    color: #555;
+}
+caption {
+    font-size: 140%;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
