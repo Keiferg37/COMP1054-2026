@@ -1,0 +1,44 @@
+## Central Division Data (as of March 31, 2026)
+ 
+| Team                   | GP | W  | L  | OTL | PTS | RW | ROW | GF  | GA  | DIFF | STRK | L10   |
+|------------------------|----|----|----|-----|-----|----|-----|-----|-----|------|------|-------|
+| Colorado Avalanche (x) | 55 | 37 |  9 |  9  |  83 | 34 | 36  | 212 | 138 |  +74 | W1   | 4-5-1 |
+| Minnesota Wild         | 58 | 34 | 14 | 10  |  78 | 21 | 30  | 196 | 169 |  +27 | W5   | 8-1-1 |
+| Dallas Stars (x)       | 57 | 34 | 14 |  9  |  77 | 28 | 30  | 193 | 160 |  +33 | W6   | 7-3-0 |
+| Utah Mammoth           | 57 | 30 | 23 |  4  |  64 | 23 | 30  | 183 | 157 |  +26 | W2   | 7-3-0 |
+| Nashville Predators    | 57 | 26 | 24 |  7  |  59 | 19 | 23  | 169 | 198 |  -29 | L2   | 3-4-3 |
+| Chicago Blackhawks     | 57 | 22 | 26 |  9  |  53 | 17 | 19  | 154 | 185 |  -31 | L1   | 3-5-2 |
+| Winnipeg Jets          | 56 | 22 | 26 |  8  |  52 | 20 | 21  | 160 | 175 |  -15 | L2   | 3-4-3 |
+| St. Louis Blues        | 57 | 20 | 28 |  9  |  49 | 19 | 19  | 147 | 203 |  -56 | L3   | 2-7-1 |
+ 
+**(x) = Clinched Playoff Spot**
+ 
+## Column Legend
+ 
+- **GP** – Games Played
+- **W** – Wins
+- **L** – Losses
+- **OTL** – Overtime Losses
+- **PTS** – Points
+- **RW** – Regulation Wins
+- **ROW** – Regulation + Overtime Wins
+- **GF** – Goals For
+- **GA** – Goals Against
+- **DIFF** – Goal Differential
+- **STRK** – Current Streak
+- **L10** – Record in Last 10 Games
+ 
+## Suggested Git Commits
+ 
+1. `Initial commit – project scaffolding and tablesort files`
+2. `Add HTML table structure with thead, tfoot, tbody`
+3. `Populate table with Central Division standings data`
+4. `Style table with CSS – borders, padding, caption`
+5. `Add colgroup and zebra striping`
+6. `Initialize Tablesort on the standings table`
+7. `Final cleanup and README`
+ 
+## Data Source
+ 
+- ESPN NHL Standings: <https://www.espn.com/nhl/standings>
+- NHL.com Standings: <https://www.nhl.com/standings/2026-03-31/division>
